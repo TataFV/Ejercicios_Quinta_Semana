@@ -24,5 +24,29 @@ function _main_() {
      */
     var isRunning = false;
 
+    do {
+        var numero_aleatorio = crear_aleatorio();
+        for (var i = 0; i < 5; i++) {
+            numero_usuario = simple_user_input("Introduce un número");
+            mensaje_menor_mayor = comprobar_menor_mayor(numero_aleatorio, numero_usuario);
+            alert_output(mensaje_menor_mayor);
+            if (numero_aleatorio == numero_usuario) {
+                alert_output("Has acertado")
+                break
+            }
+        }
+
+        mensaje_continuar = simple_user_input("¿Quieres seguir jugando?\n1- Sí\n2-No").toLowerCase()
+
+        if (mensaje_continuar == "1") {
+            isRunning = true;
+        } else {
+            isRunning = false;
+        }
+
+    } while (isRunning)
+
+}
+_main_()
 }
 
