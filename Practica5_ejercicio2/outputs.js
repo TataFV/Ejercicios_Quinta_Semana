@@ -11,7 +11,6 @@ function console_output(msg) {
  * Muestra un mensaje con un alert
  * @param {string} msg - Mensaje que sale por consola
  */
-* /
 function alert_output(msg) {
     alert(msg)
 }
