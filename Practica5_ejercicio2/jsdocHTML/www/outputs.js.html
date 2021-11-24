@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: azar.js</title>
+    <title>JSDoc: Source: outputs.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: azar.js</h1>
+    <h1 class="page-title">Source: outputs.js</h1>
 
     
 
@@ -26,35 +26,21 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/** 
- * Devuelve un número aleatorio
- * @returns {integer} número aleatorio 
-*/
-function crear_aleatorio() {
-    /**
-     * Nombre del número aleatorio 
-     * @type {integer}
-    */
-    var numero_aleatorio = Math.floor(Math.random() * 100) + 1;
-    return numero_aleatorio
-}
-/**
- * Comprueba si el número aleatorio es menor o mayor que el que introdujo el usuario
- * @param {integer} aleatorio - Número aleatorio creado
- * @param {integer} usuario - Número introducido por el usuario
- * @param {string} mensaje - Comunica al usuario si el número es mayor, menor o si ha acertado 
+            <pre class="prettyprint source linenums"><code>/**
+ * Muestra un mensaje por consula 
+ * @param {string} msg - Mensaje que sale por consola
  */
 
-function comprobar_menor_mayor(aleatorio, usuario) {
-    var mensaje;
-    if (usuario > aleatorio) {
-        mensaje = "El número que buscas es menor"
-    } else if (usuario &lt; aleatorio) {
-        mensaje = "El número que buscas es mayor"
-    } else {
-        mensaje = "Has acertado"
-    }
-    return mensaje
+function console_output(msg) {
+    console.log(msg)
+}
+
+/**
+ * Muestra un mensaje con un alert
+ * @param {string} msg - Mensaje que sale por consola
+ */
+function alert_output(msg) {
+    alert(msg)
 }</code></pre>
         </article>
     </section>
